@@ -2,8 +2,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center; /* Center content vertically for pages like NotFound */
-  max-width: 1200px;
+  justify-content: center;
   margin: 0 auto;
   padding: 2rem;
   min-height: calc(100vh - 100px); /* Adjust based on Navbar and Footer height */
@@ -14,15 +13,16 @@
 }
 
 .container {
-  background: rgba(255, 255, 255, 0.1); /* Subtle translucent background for modern look */
+  background: rgba(255, 255, 255, 0.1); /* Subtle translucent background */
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Darker shadow for depth */
   border-radius: 8px;
-  width: 100%;
+  width: 100%; /* Always take the full width of the parent */
   padding: 1.5rem;
   box-sizing: border-box;
-  min-height: 300px; /* Ensures a minimum height for aesthetic balance */
+  min-height: 300px; /* Minimum height for aesthetic balance */
   backdrop-filter: blur(10px); /* Adds a blur effect for a frosted glass look */
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth transitions for interactivity */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth transitions */
+  margin: 0 auto; /* Centers the container horizontally */
 }
 
 /* Responsive behavior */

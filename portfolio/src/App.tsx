@@ -12,12 +12,14 @@ function App() {
     <BrowserRouter>
       <Navbar />
       <main className={styles.main}>
-        <Routes>
-          <Route path="/" element={<div className={styles.container}><Home /></div>} />
-          <Route path="/about" element={<div className={styles.container}><About /></div>} />
-          <Route path="/portfolio" element={<div className={styles.container}><Portfolio /></div>} />
-          <Route path="*" element={<div className={styles.container}><NotFound /></div>} />
-        </Routes>
+        <div className={styles.container}>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/portfolio" element={<Portfolio />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </div>
       </main>
       <Footer />
     </BrowserRouter>

@@ -67,18 +67,6 @@ body {
   }
 }
 
-@keyframes waterfallFlow {
-  0% {
-    transform: translateY(0) scaleX(1);
-    opacity: 0.4;
-  }
-  100% {
-    transform: translateY(50%) scaleX(1.1);
-    opacity: 0.6;
-  }
-}
-
-/* Multiple layers for depth */
 body::before,
 body::after {
   content: '';
@@ -242,17 +230,4 @@ button:hover::after {
   body::after {
     animation: none;
   }
-}
-
-/* Adding some waterfall effect */
-.waterfall {
-  position: absolute;
-  top: 40%;
-  left: 20%;
-  width: 60%;
-  height: 60%;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3));
-  background-size: 200% 200%;
-  animation: waterfallFlow 2s infinite linear;
-  filter: blur(3px) brightness(1.2);
 }

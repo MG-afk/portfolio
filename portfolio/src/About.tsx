@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import styles from './About.module.css';
-import TypingEffectWithCursor from './effects/TypingEffectWithCursor';
 
 export default function About() {
     const greetings: string[] = [
@@ -23,7 +22,7 @@ export default function About() {
             <div className={styles.content}>
                 <header className={styles.header}>
                     <h1 className={styles.title}>
-                        <TypingEffectWithCursor text={greetings[currentIndex]} />
+                        {greetings[currentIndex]}
                     </h1>
                     <div className={styles.subtitle}>
                         Crafting Digital Experiences in the Digital Forest

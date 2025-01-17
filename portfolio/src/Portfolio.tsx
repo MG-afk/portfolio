@@ -12,7 +12,7 @@ const projects = [
       'Managed complex state for player movement',
       'Optimized collision detection algorithms'
     ],
-    gifUrl: '/api/placeholder/600/400', // Replace with your actual GIF URL
+    gifUrl: 'https://raw.githubusercontent.com/MG-afk/Asteroids/refs/heads/main/src/asteroids.gif', // Replace with your actual GIF URL
     githubUrl: 'https://github.com/yourusername/platformer',
     liveUrl: 'https://your-platformer-demo.com'
   },

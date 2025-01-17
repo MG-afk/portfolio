@@ -39,25 +39,28 @@
   }
   
   .projectContainer {
-    position: relative;
-    min-height: 400px;
+    position: relative; /* Maintain relative positioning for other styles */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Ensure content starts at the top */
+    min-height: 400px; /* Optional: Define a minimum height */
+    transition: height 0.5s ease; /* Smoothly adjust height if needed */
   }
   
   .project {
-    position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 0.5s ease, transform 0.5s ease;
+    display: none; /* Hide inactive projects to avoid layout shifts */
   }
   
   .visible {
     opacity: 1;
     transform: translateY(0);
+    display: block; /* Show only the active project */
   }
-  
+    
   .projectContent {
     display: grid;
     grid-template-columns: 1fr 1fr;
