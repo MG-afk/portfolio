@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import styles from './About.module.css';
 import TypingEffectWithCursor from './effects/TypingEffectWithCursor';
-import { motion } from 'framer-motion';
 
 export default function About() {
     const greetings: string[] = [
