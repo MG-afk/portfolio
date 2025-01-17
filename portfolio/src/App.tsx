@@ -19,7 +19,7 @@ function App() {
           <Route path="*" element={<div className={styles.container}><NotFound /></div>} />
         </Routes>
       </main>
-      {/*<Footer />*/}
+      <Footer />
     </BrowserRouter>
   );
 }
