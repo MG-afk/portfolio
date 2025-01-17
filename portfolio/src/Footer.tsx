@@ -1,9 +1,11 @@
-export default function Footer() {
-    let year = new Date().getFullYear();
+import styles from "./Footer.module.css";
 
-    return(
-        <footer>
-            &copy; Michal Gabrys {year}
-        </footer>
-    );
+export default function Footer() {
+  const year = new Date().getFullYear();
+
+  return (
+    <footer className={styles.footer}>
+      &copy; Michal Gabrys {year} | <a href="#">Privacy Policy</a>
+    </footer>
+  );
 }
