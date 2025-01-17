@@ -48,7 +48,7 @@ export default function Portfolio() {
   const [activeProject, setActiveProject] = useState(projects[0].id);
   const [isTransitioning, setIsTransitioning] = useState(false);
 
-  const handleProjectChange = (projectId) => {
+  const handleProjectChange = (projectId: string) => {
     if (projectId === activeProject) return;
     setIsTransitioning(true);
     setTimeout(() => {
