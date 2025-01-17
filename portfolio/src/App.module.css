@@ -1,0 +1,77 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Center content vertically for pages like NotFound */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  min-height: calc(100vh - 100px); /* Adjust based on Navbar and Footer height */
+  box-sizing: border-box;
+  background: linear-gradient(135deg, rgba(27, 42, 35, 0.9), rgba(46, 62, 49, 0.9)); /* Forest gradient background */
+  border-radius: 10px; /* Soft rounded corners */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); /* Slight shadow for depth */
+}
+
+.container {
+  background: rgba(255, 255, 255, 0.1); /* Subtle translucent background for modern look */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Darker shadow for depth */
+  border-radius: 8px;
+  width: 100%;
+  padding: 1.5rem;
+  box-sizing: border-box;
+  min-height: 300px; /* Ensures a minimum height for aesthetic balance */
+  backdrop-filter: blur(10px); /* Adds a blur effect for a frosted glass look */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth transitions for interactivity */
+}
+
+/* Responsive behavior */
+@media (max-width: 768px) {
+  .main {
+    padding: 1rem;
+  }
+
+  .container {
+    padding: 1rem;
+    min-height: 250px; /* Adjust minimum height for smaller screens */
+  }
+}
+
+/* Fancy Animated Background */
+@keyframes backgroundShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* For pages like NotFound with minimal content */
+.main {
+  animation: backgroundShift 6s ease-in-out infinite; /* Animates the background */
+  background-size: 400% 400%;
+}
+
+/* Adjusting font sizes */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--accent-color); /* Use accent color from global theme */
+  font-family: 'Pacifico', cursive;
+  margin: 0;
+  padding: 0.5rem 0;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.6); /* Subtle text shadow for contrast */
+}
+
+p, a {
+  color: var(--font-color); /* Use font color from global theme */
+  line-height: 1.5;
+  font-size: 1.1rem;
+}
+
+a:hover {
+  color: var(--accent-color); /* Accent color on hover */
+  text-shadow: 0 2px 5px rgba(255, 255, 255, 0.6); /* Accent hover effect */
+}

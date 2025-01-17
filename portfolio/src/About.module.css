@@ -1,0 +1,184 @@
+    /* About.module.css */
+    .aboutContainer {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 2rem;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .content {
+        max-width: 800px;
+        width: 100%;
+        position: relative;
+        z-index: 1;
+        padding: 2rem;
+        background: rgba(26, 40, 32, 0.4);
+        border-radius: 12px;
+        backdrop-filter: blur(10px);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        border: 1px solid rgba(168, 208, 141, 0.1);
+    }
+
+    .header {
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+
+    .title {
+        font-size: 3.5rem;
+        margin-bottom: 1rem;
+        background: linear-gradient(45deg, var(--accent-color), var(--secondary-color));
+        -webkit-background-clip: text;
+        color: transparent;
+        text-shadow: 0 2px 15px var(--glow-color);
+    }
+
+    .subtitle {
+        font-family: 'Spectral', serif;
+        font-size: 1.5rem;
+        color: var(--secondary-color);
+        font-style: italic;
+        opacity: 0.9;
+    }
+
+    .bio {
+        text-align: center;
+        margin-top: 2rem;
+    }
+
+    .bio p {
+        font-size: 1.2rem;
+        line-height: 1.8;
+        margin-bottom: 2rem;
+        color: var(--font-color);
+    }
+
+    .skills {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        justify-content: center;
+        margin-top: 2rem;
+    }
+
+    .skill {
+        padding: 0.5rem 1.5rem;
+        background: rgba(168, 208, 141, 0.1);
+        border: 1px solid var(--accent-color);
+        border-radius: 20px;
+        color: var(--accent-color);
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: 0.9rem;
+        transition: all 0.3s ease;
+        cursor: default;
+    }
+
+    .skill:hover {
+        background: rgba(168, 208, 141, 0.2);
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px var(--glow-color);
+    }
+
+    .firefly {
+        position: absolute;
+        width: 3px;
+        height: 3px;
+        border-radius: 50%;
+        background: var(--firefly-color);
+        filter: blur(2px);
+        animation: fireflyFloat 4s ease-in-out infinite;
+    }
+
+    @keyframes fireflyFloat {
+        0%, 100% {
+            transform: translate(0, 0) scale(0.8);
+            opacity: 0;
+        }
+        50% {
+            transform: translate(10px, -10px) scale(1.2);
+            opacity: 1;
+        }
+    }
+
+    /* Portfolio.module.css improvements */
+    .portfolioNav {
+        display: flex;
+        justify-content: center;
+        gap: 1.5rem;
+        margin: 2rem 0;
+        padding: 1rem;
+        background: rgba(27, 42, 35, 0.4);
+        backdrop-filter: blur(10px);
+        border-radius: 12px;
+        border: 1px solid rgba(168, 208, 141, 0.1);
+    }
+
+    .projectContent {
+        background: rgba(27, 42, 35, 0.4);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(168, 208, 141, 0.1);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    }
+
+    .projectInfo h2 {
+        font-family: 'Cinzel', serif;
+        color: var(--accent-color);
+        text-shadow: 0 2px 5px var(--shadow-color);
+    }
+
+    .projectInfo ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    .projectInfo li {
+        padding: 0.5rem 0;
+        color: var(--secondary-color);
+        position: relative;
+        padding-left: 1.5rem;
+    }
+
+    .projectInfo li::before {
+        content: '→';
+        position: absolute;
+        left: 0;
+        color: var(--accent-color);
+    }
+
+    .projectLinks a {
+        background: linear-gradient(45deg, 
+            var(--accent-color),
+            color-mix(in srgb, var(--accent-color) 80%, var(--bg-color))
+        );
+        border: none;
+        color: var(--bg-color);
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        font-weight: 600;
+    }
+
+    @media (max-width: 768px) {
+        .title {
+            font-size: 2.5rem;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+        }
+        
+        .content {
+            padding: 1.5rem;
+        }
+        
+        .skills {
+            gap: 0.8rem;
+        }
+        
+        .skill {
+            padding: 0.4rem 1.2rem;
+            font-size: 0.8rem;
+        }
+    }
