@@ -19,7 +19,7 @@ function App() {
             <Route path="/portfolio" element={<Portfolio />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
-        </div>
+          </div>
       </main>
       <Footer />
     </BrowserRouter>

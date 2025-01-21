@@ -4,23 +4,25 @@ import styles from './Home.module.css';
 
 export default function Home() {
   return (
-    <div className={styles.hero}>
-      <h1 className={styles.title}>Michal Gabrys</h1>
-      <p className={styles.subtitle}>
-        Full-Stack Developer & Creative Problem Solver
-      </p>
-      
-      <div className={styles.cta}>
-        <Link to="/portfolio">
-          <button>
-            View My Work <ChevronRight size={20} />
-          </button>
-        </Link>
-        <Link to="/about">
-          <button>
-            Learn More About Me <ChevronRight size={20} />
-          </button>
-        </Link>
+    <>
+      <div className={styles.main}>
+        <h1 className={styles.title}>Michal Gabrys</h1>
+        <p className={styles.subtitle}>
+          Full-Stack Developer & Creative Problem Solver
+        </p>
+        
+        <div className={styles.cta}>
+          <Link to="/portfolio">
+            <button>
+              View My Work <ChevronRight size={20} />
+            </button>
+          </Link>
+          <Link to="/about">
+            <button>
+              Learn More About Me <ChevronRight size={20} />
+            </button>
+          </Link>
+        </div>
       </div>
 
       <div className={styles.highlights}>
@@ -42,6 +44,6 @@ export default function Home() {
           <p>Always exploring new technologies and best practices to stay at the cutting edge.</p>
         </div>
       </div>
-    </div>
+    </>
   );
 }

@@ -36,10 +36,6 @@
   transition: transform 0.3s ease;
 }
 
-.navbar button:hover {
-  transform: rotate(90deg);
-}
-
 .navbar nav {
   display: flex;
   gap: 3rem;

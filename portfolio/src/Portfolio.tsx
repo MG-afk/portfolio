@@ -58,7 +58,7 @@ export default function Portfolio() {
   };
 
   return (
-    <div>
+    <>
       <nav className={styles.portfolioNav}>
         {projects.map((project) => (
           <button
@@ -110,6 +110,6 @@ export default function Portfolio() {
           </div>
         ))}
       </div>
-    </div>
+    </>
   );
 }
